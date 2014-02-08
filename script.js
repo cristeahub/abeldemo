@@ -68,7 +68,31 @@ window.onload = function() {
       }, 5500);
     }, 5500);
   }, 17500);
+  var video = document.createElement('video');
+  video.setAttribute('src', 'video3.mp4');
+  var teletubbies = document.createElement('video');
+  teletubbies.setAttribute('src', 'teletubbies.mp4');
+  setTimeout(function() {
+    document.body.appendChild(video);
+    video.play();
+    video.onended = function(e) {
+      /*Do things here!*/
+      document.body.removeChild(video);
 
+      document.body.appendChild(teletubbies);
+      teletubbies.play();
+      teletubbies.onended = function(e) {
+        /*Do things here!*/
+        document.body.removeChild(teletubbies);
+        document.body.appendChild(video);
+        video.play();
+        video.onended = function(e) {
+          /*Do things here!*/
+          document.body.removeChild(video);
+        }
+      }
+    }
+  }, 14000);
 
   var audioElement = document.createElement('audio');
   audioElement.setAttribute('src', 'music.mp3');
