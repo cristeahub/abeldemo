@@ -79,16 +79,15 @@ window.onload = function() {
     video.play();
     video.onended = function(e) {
       /*Do things here!*/
-      document.body.removeChild(video);
+      video.style.display = 'none';
 
       document.body.appendChild(teletubbies);
       teletubbies.play();
       teletubbies.onended = function(e) {
         /*Do things here!*/
         document.body.removeChild(teletubbies);
-        document.body.appendChild(video);
+        video.style.display = 'block';
         video.currentTime = 0;
-        video.load();
         video.play();
         video.onended = function(e) {
           /*Do things here!*/
