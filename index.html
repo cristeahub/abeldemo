@@ -22,11 +22,21 @@
                 position: absolute;
                 width: 100%;
                 display: none;
+                top:0;
+                left:0;
+                z-index: -9999;
+            }
+            .text {
+                text-shadow: 1px 1px 3px #ccc;
+                position: absolute;
+                top: 0;
+                right: 0;
+                overflow: hidden;
             }
         </style>
     </head>
     <body>
-        <p id=text></p>
+        <p id=text class=text></p>
         <img src=images/old-school-Jo-Naylor.png id=img1 class=image>
         <img src=images/old-school-lindsayloveshermac.jpg id=img2 class=image>
         <img src=images/old-school-mcclanahoochie.jpg id=img3 class=image>
