@@ -67,12 +67,14 @@ window.onload = function() {
         text.innerHTML = "Bitsy Juice and Overflow In Yo Ass out! The demo is over now";
       }, 5500);
     }, 5500);
-  }, 17500);
+  }, 32500);
+
   var video = document.createElement('video');
   video.setAttribute('src', 'video3.mp4');
   var teletubbies = document.createElement('video');
   teletubbies.setAttribute('src', 'teletubbies.mp4');
   setTimeout(function() {
+    text.style.display = 'none';
     document.body.appendChild(video);
     video.play();
     video.onended = function(e) {
@@ -85,6 +87,8 @@ window.onload = function() {
         /*Do things here!*/
         document.body.removeChild(teletubbies);
         document.body.appendChild(video);
+        video.currentTime = 0;
+        video.load();
         video.play();
         video.onended = function(e) {
           /*Do things here!*/
