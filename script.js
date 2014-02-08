@@ -70,4 +70,7 @@ window.onload = function() {
   }, 17500);
 
 
+  var audioElement = document.createElement('audio');
+  audioElement.setAttribute('src', 'music.mp3');
+  audioElement.play();
 };
