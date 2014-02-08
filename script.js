@@ -86,13 +86,7 @@ window.onload = function() {
       teletubbies.onended = function(e) {
         /*Do things here!*/
         document.body.removeChild(teletubbies);
-        video.style.display = 'block';
-        video.currentTime = 0;
-        video.play();
-        video.onended = function(e) {
-          /*Do things here!*/
-          document.body.removeChild(video);
-        }
+        text.style.display = 'block';
       }
     }
   }, 14000);
