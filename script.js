@@ -12,6 +12,7 @@ window.onload = function() {
     setTimeout(function() {
       img4.style.display = "none";
       img1.style.display = "block";
+      document.body.style.background = "#000";
       setTimeout(function() {
         img1.style.display = "none";
         img2.style.display = "block";
@@ -40,8 +41,8 @@ window.onload = function() {
       setTimeout(function() {
         text.innerHTML = "We used at least an hour on this demo";
         text.style.fontSize = "4em";
-        text.style.right = "50%";
-        text.style.top = "50%";
+        text.style.right = "20%";
+        text.style.top = "10%";
       }, 3000);
     }, 3000);
   }, 3000);
